@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 
+import "./style.css"
+
 class CardNota extends Component {
+    constructor(props) {
+        super()
+    }
+
     render() {
         return (
-            <section>
+            <section className="card-nota">
                 <header>
-                    <h3>Criar nota</h3>
+                    <h3>{this.props.titulo}</h3>
                 </header>
-                <p>Escreva sua nota</p>
+                <p>{this.props.text}</p>
             </section>
         );
     }
