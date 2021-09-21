@@ -1,20 +1,21 @@
 import React, { Component } from "react"
 import CardNota from "../CardNota"
+import { Grid, Box } from "@material-ui/core";
 
 import "./style.css"
 
 class ListaDeNotas extends Component {
     render() {
         return (
-            <ul className="lista-notas">
+            <Grid spacing={2}>
                 {this.props.notas.map((nota, index) => {
                     return (
-                        <li className="lista-notas__item" key={index}>
-                            <CardNota titulo={nota.titulo} text={nota.texto} />
-                        </li>
+                        <Box mb={3} display="flex">
+                            <CardNota titulo={nota.titulo} text={nota.texto}  key={index} />
+                        </Box>
                     )
                 })}
-            </ul>
+            </Grid>
         )
     }
 }
