@@ -21,14 +21,20 @@ class App extends Component {
         this.setState(novoEstado)
     }
 
+    deletarNota() {
+        console.log("Deletar");
+    }
+
     render() {
         return (
-            <Box sx={{ flexGrow: 1 }}>
-                <Grid lg={2}>
+            <Box>
+                <Grid item lg={2}>
                     <FormularioCadastro criarNota={this.criarNota.bind(this)} />
                 </Grid>
-                <Grid lg={12}>
-                    <ListaDeNotas notas={this.state.notas} />
+                <Grid item lg={10}>
+                    <ListaDeNotas
+                    apagarNota={this.deletarNota.bind(this)}
+                    notas={this.state.notas} />
                 </Grid>
             </Box>
         );

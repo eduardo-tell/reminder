@@ -7,11 +7,13 @@ import "./style.css"
 class ListaDeNotas extends Component {
     render() {
         return (
-            <Grid spacing={2}>
+            <Grid spacing={2} container>
                 {this.props.notas.map((nota, index) => {
                     return (
-                        <Box mb={3} display="flex">
-                            <CardNota titulo={nota.titulo} text={nota.texto}  key={index} />
+                        <Box mb={3} display="flex" key={index}>
+                            <CardNota
+                            apagarNota={this.props.apagarNota}
+                            titulo={nota.titulo} text={nota.texto}/>
                         </Box>
                     )
                 })}
