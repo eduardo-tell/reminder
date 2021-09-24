@@ -1,4 +1,6 @@
 import React, { Component } from "react"
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 
 class FormularioCadastro extends Component {
 
@@ -24,8 +26,13 @@ class FormularioCadastro extends Component {
     render() {
         return (
             <form onSubmit={this._criarNota.bind(this)}>
-                <input type="text" placeholder="Titulo" onChange={this._mudancaTitulo.bind(this)}/>
-                <textarea rows={15} onChange={this._mudancaTexto.bind(this)} placeholder="Escreva sua nota" ></textarea>
+                <TextField type="text" id="outlined-basic" label="Titulo" variant="outlined" onChange={this._mudancaTitulo.bind(this)} />
+                 <TextField
+                    onChange={this._mudancaTexto.bind(this)}
+                    label="Escreva sua nota"
+                    multiline
+                    maxRows={4}
+                />
                 <button>Criar nota</button>
             </form>
         )

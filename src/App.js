@@ -30,7 +30,7 @@ class App extends Component {
 
     render() {
         return (
-            <Box>
+            <Grid container spacing={2}>
                 <Grid item lg={2}>
                     <FormularioCadastro criarNota={this.criarNota.bind(this)} />
                 </Grid>
@@ -39,7 +39,7 @@ class App extends Component {
                     apagarNota={this.deletarNota.bind(this)}
                     notas={this.state.notas} />
                 </Grid>
-            </Box>
+            </Grid>
         );
     }
 }
