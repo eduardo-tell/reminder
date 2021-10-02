@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eduardo-tell/reminder/static/css/main.886838ac.chunk.css",
+    "main.css": "/eduardo-tell/reminder/static/css/main.9446c92e.chunk.css",
     "main.js": "/eduardo-tell/reminder/static/js/main.6cf615af.chunk.js",
     "main.js.map": "/eduardo-tell/reminder/static/js/main.6cf615af.chunk.js.map",
     "runtime-main.js": "/eduardo-tell/reminder/static/js/runtime-main.5f9bbaa8.js",
@@ -8,14 +8,14 @@
     "static/js/2.b08f7012.chunk.js": "/eduardo-tell/reminder/static/js/2.b08f7012.chunk.js",
     "static/js/2.b08f7012.chunk.js.map": "/eduardo-tell/reminder/static/js/2.b08f7012.chunk.js.map",
     "index.html": "/eduardo-tell/reminder/index.html",
-    "static/css/main.886838ac.chunk.css.map": "/eduardo-tell/reminder/static/css/main.886838ac.chunk.css.map",
+    "static/css/main.9446c92e.chunk.css.map": "/eduardo-tell/reminder/static/css/main.9446c92e.chunk.css.map",
     "static/js/2.b08f7012.chunk.js.LICENSE.txt": "/eduardo-tell/reminder/static/js/2.b08f7012.chunk.js.LICENSE.txt",
     "static/media/delete.1129c53a.svg": "/eduardo-tell/reminder/static/media/delete.1129c53a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.5f9bbaa8.js",
     "static/js/2.b08f7012.chunk.js",
-    "static/css/main.886838ac.chunk.css",
+    "static/css/main.9446c92e.chunk.css",
     "static/js/main.6cf615af.chunk.js"
   ]
 }
