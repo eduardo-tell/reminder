@@ -1,6 +1,6 @@
 {
   "name": "reminder",
-  "homepage": "https://github.com/eduardo-tell/reminder",
+  "homepage": "https://eduardo-tell.github.io/reminder",
   "version": "0.1.0",
   "dependencies": {
     "@emotion/react": "^11.4.1",
