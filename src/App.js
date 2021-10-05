@@ -9,7 +9,8 @@ class App extends Component {
     constructor() {
         super()
         this.state = {
-            notas: []
+            notas: [],
+            categorias: ["Categoria 01", "Categoria 02"]
         }
     }
 
@@ -18,6 +19,15 @@ class App extends Component {
         const mpvoArrayNotas = [...this.state.notas, novaNota]
         const novoEstado = {
             notas: mpvoArrayNotas
+        }
+        this.setState(novoEstado)
+    }
+
+    adicionarCategoria(titulo) {
+        const novacategoria= {titulo, texto}
+        const novoArraycategoria = [...this.state.categorias, novacategoria]
+        const novoEstado = {
+            notas: novoArraycategoria
         }
         this.setState(novoEstado)
     }
@@ -33,13 +43,17 @@ class App extends Component {
         return (
             <Grid container spacing={2}>
                 <Grid item lg={2}>
-                    <FormularioCadastro criarNota={this.criarNota.bind(this)} />
+                    <FormularioCadastro
+                        adicionarCategoria={this.adicionarCategoria.bind(this)}
+                        criarNota={this.criarNota.bind(this)} />
                 </Grid>
                 <Grid item lg={10}>
-                    <ListaCategorias />
+                    <ListaCategorias
+                        categorias={this.state.categorias} />
+
                     <ListaDeNotas
-                    apagarNota={this.deletarNota.bind(this)}
-                    notas={this.state.notas} />
+                        apagarNota={this.deletarNota.bind(this)}
+                        notas={this.state.notas} />
                 </Grid>
             </Grid>
         );

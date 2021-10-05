@@ -7,15 +7,20 @@ class ListaCategorias extends Component {
         console.log(e)
         if (e.key == "Enter") {
             console.log("Categoria")
+            this.props.adicionarCategoria(e.target.value)
         }
     }
 
     render() {
         return (
             <form>
-                <ul>
-                    <li> <span> Item </span> </li>
-                </ul>
+                {this.props.categorias.map((categoria, index) => {
+                    return (
+                        <ul>
+                            <li> <span> {categoria} </span> </li>
+                        </ul>
+                    )
+                })}
                 <TextField type="text" onKeyUp={this._eventoInput.bind(this)} id="outlined-basic" label="Pesquisar" variant="outlined" />
             </form>
         );
