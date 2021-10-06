@@ -26,7 +26,10 @@ class CardNota extends Component {
                     {this.props.titulo}
                     </Typography>
                     <Typography variant="h5" component="div">
-                    {this.props.text}
+                        {this.props.text}
+                    </Typography>
+                    <Typography variant="h5" component="div">
+                        {this.props.categoria}
                     </Typography>
                 </CardContent>
                 <CardActions>

@@ -10,7 +10,7 @@ class App extends Component {
         super()
         this.state = {
             notas: [],
-            categorias: ["Categoria 01", "Categoria 02"]
+            categorias: []
         }
     }
 
@@ -23,12 +23,9 @@ class App extends Component {
         this.setState(novoEstado)
     }
 
-    adicionarCategoria(titulo) {
-        const novacategoria= {titulo, texto}
-        const novoArraycategoria = [...this.state.categorias, novacategoria]
-        const novoEstado = {
-            notas: novoArraycategoria
-        }
+    adicionarCategoria(nomeCategoria) {
+        const novoArraycategoria = [...this.state.categorias, nomeCategoria]
+        const novoEstado = {...this.state, categorias: novoArraycategoria }
         this.setState(novoEstado)
     }
 
@@ -44,11 +41,12 @@ class App extends Component {
             <Grid container spacing={2}>
                 <Grid item lg={2}>
                     <FormularioCadastro
-                        adicionarCategoria={this.adicionarCategoria.bind(this)}
+                        categorias={this.state.categorias}
                         criarNota={this.criarNota.bind(this)} />
                 </Grid>
                 <Grid item lg={10}>
                     <ListaCategorias
+                        adicionarCategoria={this.adicionarCategoria.bind(this)}
                         categorias={this.state.categorias} />
 
                     <ListaDeNotas

@@ -10,6 +10,7 @@ class FormularioCadastro extends Component {
         super(props)
         this.titulo = "";
         this.texto = "";
+        this.categoria = "";
     }
 
     _mudancaTitulo(evento) {
@@ -20,9 +21,14 @@ class FormularioCadastro extends Component {
         this.texto = evento.target.value;
     }
 
+    _mudancaCategoria(evento) {
+        this.categoria = evento.target.value;
+    }
+
     _criarNota(evento) {
         evento.preventDefault()
-        this.props.criarNota(this.titulo, this.texto)
+        console.log(evento)
+        this.props.criarNota(this.titulo, this.texto, this.categoria)
     }
 
     render() {
@@ -35,6 +41,14 @@ class FormularioCadastro extends Component {
                     multiline
                     maxRows={4}
                 />
+                <select name="" id="">
+                    <option value=""></option>
+                    {this.props.categorias.map((categoria, index) => {
+                        return (
+                            <option key={index} value={categoria} onClick={this._mudancaCategoria.bind(this)}> {categoria}</option>
+                        )
+                    })}
+                </select>
                 <Button type="submit" variant="outlined">Adicionar</Button>
             </form>
         )
