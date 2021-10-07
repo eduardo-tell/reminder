@@ -19,6 +19,8 @@ class CardNota extends Component {
     }
 
     render() {
+        console.log(this.props)
+
         return (
             <Card sx={{ minWidth: 275 }}>
                 <CardContent>

@@ -12,11 +12,11 @@ class ListaDeNotas extends Component {
                     return (
                         <Box mb={3} display="flex" key={index}>
                             <CardNota
-                            indice={index}
-                            apagarNota={this.props.apagarNota}
-                            titulo={nota.titulo}
-                            text={nota.texto}
-                            categoria={nota.cateoria}/>
+                                indice={index}
+                                apagarNota={this.props.apagarNota}
+                                titulo={nota.titulo}
+                                text={nota.texto}
+                                categoria={nota.categoria}/>
                         </Box>
                     )
                 })}
