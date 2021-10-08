@@ -23,12 +23,6 @@ class App extends Component {
         this.setState(novoEstado)
     }
 
-    adicionarCategoria(nomeCategoria) {
-        const novoArraycategoria = [...this.state.categorias, nomeCategoria]
-        const novoEstado = {...this.state, categorias: novoArraycategoria }
-        this.setState(novoEstado)
-    }
-
     deletarNota(index) {
         let arrayNotas = this.state.notas;
         arrayNotas.splice(index, 1)
