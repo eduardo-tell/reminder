@@ -46,7 +46,7 @@ class App extends Component {
                 <Grid item lg={10}>
                     <ListaCategorias
                         adicionarCategoria={this.categorias.adicionarCategoria}
-                        categorias={this.categorias.categorias} />
+                        categorias={this.categorias} />
 
                     <ListaDeNotas
                         apagarNota={this.notas.apagarNota}

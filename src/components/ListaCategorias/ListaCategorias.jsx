@@ -12,7 +12,7 @@ class ListaCategorias extends Component {
     render() {
         return (
             <div>
-                {this.props.categorias.map((categoria, index) => {
+                {this.props.categorias.categorias.map((categoria, index) => {
                     return (
                         <ul key={index}>
                             <li> <span> {categoria} </span> </li>
