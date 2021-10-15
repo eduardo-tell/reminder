@@ -3,6 +3,14 @@ import TextField from '@mui/material/TextField';
 
 class ListaCategorias extends Component {
 
+    componentDidMount() { // Para incrições e desinscrições
+        this.props.categorias.inscrever(this._novasCategorias.bind(this))
+    }
+
+    _novasCategorias(categorias) {
+        console.log(categorias);
+    }
+
     _eventoInput(e) {
         if (e.key == "Enter") {
             this.props.adicionarCategoria(e.target.value)
