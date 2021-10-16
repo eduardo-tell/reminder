@@ -3,12 +3,17 @@ import TextField from '@mui/material/TextField';
 
 class ListaCategorias extends Component {
 
+    constructor() {
+        super()
+        this.state = {categorias: []}
+    }
+
     componentDidMount() { // Para incrições e desinscrições
         this.props.categorias.inscrever(this._novasCategorias.bind(this))
     }
 
     _novasCategorias(categorias) {
-        console.log(categorias);
+        this.setState({...this.state, categorias})
     }
 
     _eventoInput(e) {
@@ -20,7 +25,7 @@ class ListaCategorias extends Component {
     render() {
         return (
             <div>
-                {this.props.categorias.categorias.map((categoria, index) => {
+                {this.state.categorias.map((categoria, index) => {
                     return (
                         <ul key={index}>
                             <li> <span> {categoria} </span> </li>

@@ -35,13 +35,21 @@ class App extends Component {
     //     this.setState({notas: arrayNotas})
     // }
 
+    componentDidMount() {
+        this.props.notas.inscrever(this._novasNotas.bind(this))
+    }
+
+    _novasNotas(notas) {
+        this.setState = {...this.notas, notas}
+    }
+
     render() {
         return (
             <Grid container spacing={2}>
                 <Grid item lg={2}>
                     <FormularioCadastro
-                        categorias={this.categorias.categorias}
-                        criarNota={this.notas.adicionarNota} />
+                        categorias={this.categorias}
+                        criarNota={this.notas.adicionarNota.bind(this.notas)} />
                 </Grid>
                 <Grid item lg={10}>
                     <ListaCategorias
@@ -50,7 +58,7 @@ class App extends Component {
 
                     <ListaDeNotas
                         apagarNota={this.notas.apagarNota}
-                        notas={this.notas.notas} />
+                        notas={this.notas} />
                 </Grid>
             </Grid>
         );
